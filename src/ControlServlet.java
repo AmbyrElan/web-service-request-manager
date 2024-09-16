@@ -257,7 +257,6 @@ public class ControlServlet extends HttpServlet {
         userDAO.insert(newUser);
 
         request.setAttribute("message", "User inserted successfully!");
-        //response.sendRedirect("rootView.jsp");
         RequestDispatcher view = request.getRequestDispatcher("list");
         view.forward(request,  response);;
     }
